@@ -1,0 +1,456 @@
+/* Reset
+Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
+Removed elements not supported in HTML5
+-----------------------------------------------------------------------------*/
+  html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strike,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;}
+/* Regular ol' shit */
+
+html, body{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #000;
+  text-align: center;
+  font-family: 'District-Light', sans-serif;
+}
+
+body:before{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@font-face {
+  font-family: 'District-Light';
+  src: url('/fonts/District-Light.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/District-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/District-Light.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/District-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/District-Light.svg#vwaaxvpmwt') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'District-Demi';
+  src: url('/fonts/District-Demi.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/District-Demi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/District-Demi.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/District-Demi.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/District-Demi.svg#kdbefnayqv') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+a{
+  color:#008FC5;
+  text-decoration: none !important;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.3 ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3 ease;
+}
+
+::-moz-selection {
+  background-color: rgba(3, 133, 182, 0.3);
+  color: #fff;
+}
+::selection{
+  background-color: rgba(3, 133, 182, 0.3);
+  color: #fff;
+}
+
+h1{
+  text-align: center;
+  color: #fff;
+  font: 60px 'District-Demi', sans-serif;
+  display: inline-block;
+  margin: 0 auto;
+  line-height: 110%;
+  width: 100%;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.subhead{
+  text-align: center;
+  color: #fff;
+  font: 24px 'District-Demi', sans-serif;
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container{
+  width: 80%;
+  max-width: 1440px;
+  min-height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#content{
+  color: #fff;
+  background-color: rgba(0,0,0,0.01); /* Maybe you're wondering why this is here? It's because Firefox is awful. Try turning this off. See? Now go download Chrome. */
+  width: 70%;
+  height: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1260px;
+  margin-top: 2%;
+  box-sizing: border-box;
+  z-index: 1;
+
+  -webkit-animation: fadeIn 5s 1 ease;
+  animation: fadeIn 5s 1 ease;
+}
+
+header {
+  margin-bottom: 1%;
+  z-index: 1;
+}
+
+.divDivider {
+  border-top: 1.5px solid #fff;
+}
+
+.flexcaption{
+  margin-top: 2%;
+  font-size: 1.5em;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.footer{
+  display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+  display: -moz-box;      /* OLD: Firefox (buggy) */ 
+  display: -ms-flexbox;   /* MID: IE 10 */
+  display: -webkit-flex;  /* NEW, Chrome 21+ */
+  display: flex;          /* NEW: Opera 12.1, Firefox 22+ */
+
+  -webkit-box-align: center; -moz-box-align: center; /* OLD… */
+  -ms-flex-align: center; /* You know the drill now… */
+  -webkit-align-items: center;
+  align-items: center;
+
+  -webkit-box-pack: center; -moz-box-pack: center; 
+  -ms-flex-pack: center; 
+  -webkit-justify-content: center;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 100%; /* needed for Firefox */
+  padding-top: 2% !important;
+  bottom: 10px;
+  margin: auto;
+}
+
+#logo{
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  -o-align-self: center;
+  align-self: center;
+
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  
+  margin-right: 5%;
+  margin-left: 5%;
+
+  width: 30%;
+}
+
+#logo img{
+  height: auto;
+  width: 100%;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+#resume{
+  /*margin-right: 15%;*/
+  width: auto;
+  text-align: center;
+  
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  box-lines: single;
+  flex-wrap: nowrap;
+
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+#resume a{
+  color: #fff;
+  font-size: 1.8em;
+}
+#resume a:hover{
+  color:#008FC5;
+  text-decoration: none;
+}
+
+#email{
+  /*margin-left: 15%;*/
+  width: auto;
+  text-align: center;
+
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  box-lines: single;
+  flex-wrap: nowrap;
+
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+#email a{
+  color: #fff;
+  font-size: 1.8em;
+  padding-bottom: 2px;
+}
+#email a:hover{
+  color:#008FC5;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 100em) { /*1600px*/
+  .flexcaption{font-size: 1.2em}
+  #resume a{font-size: 1.5em;}
+  #email a{font-size: 1.5em;}
+}
+@media screen and (max-width: 60em) { /*960px*/
+  #logo{width:20%;}
+  #logo img{height:auto; width: 80%; max-width: 70px; max-height: 70px;}
+  .flexcaption{font-size: .8em;}
+  #resume a{font-size: 1em;}
+  #email a{font-size: 1em;}
+}
+
+@media screen and (max-width: 40em) { /*640px*/
+  #content{width: 90%;}
+  #logo{width: 15%;}
+  #logo img{height:auto; width: 90%; max-width: 70px; max-height: 70px;}
+  .flexcaption{font-size: .6em}
+  #resume a{font-size: .8em;}
+  #email a{font-size: .8em;}
+}
+
+/* Fix for Firefox Percentage Width Flexbox Bug */
+@-moz-document url-prefix() {
+  #logo{
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+  @media screen and (max-width: 80em) { /*1280px*/
+    #logo{
+      margin-left: 5em;
+      margin-right: 5em;
+    }
+  }
+  @media screen and (max-width: 62.5em) { /*1000px*/
+    #logo{
+      margin-left: 3em;
+      margin-right: 3em;
+    }
+  }
+}
+
+/* Cool shit */
+#animation{
+  margin-top: -20%;
+  z-index: 0;
+}
+
+.wall{
+  background: url(/images/hyperspace.jpg);
+  background-size: cover;
+}
+
+.scene{
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0;
+
+  -moz-perspective: 5px;
+  -webkit-perspective: 5px;
+  perspective: 5px;
+
+  -moz-perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+
+  
+  -moz-animation: fadeIn 3s 1 linear;
+  -webkit-animation: fadeIn 3s 1 linear;
+  animation: fadeIn 3s 1 linear;
+
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  position: relative;
+}
+
+.wrap{
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  top: -500px;
+  opacity: 0;
+
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -moz-animation: move 12s infinite linear;
+  -webkit-animation: move 12s infinite linear;
+  animation: move 12s infinite linear;
+
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+}
+
+.wrap:nth-child(2){
+  -moz-animation: move 12s infinite linear;
+  -webkit-animation: move 12s infinite linear;
+  animation: move 12s infinite linear;
+
+  -moz-animation-delay: 6s;
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.wall {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.wall-right {
+  -moz-transform: rotateY(90deg) translateZ(500px);
+  -webkit-transform: rotateY(90deg) translateZ(500px);
+  transform: rotateY(90deg) translateZ(500px);
+}
+
+.wall-left {
+  -moz-transform: rotateY(-90deg) translateZ(500px);
+  -webkit-transform: rotateY(-90deg) translateZ(500px);
+  transform: rotateY(-90deg) translateZ(500px);
+}
+
+.wall-top {
+  -moz-transform: rotateX(90deg) translateZ(500px);
+  -webkit-transform: rotateX(90deg) translateZ(500px);
+  transform: rotateX(90deg) translateZ(500px);
+}
+
+.wall-bottom {
+  -moz-transform: rotateX(-90deg) translateZ(500px);
+  -webkit-transform: rotateX(-90deg) translateZ(500px);
+  transform: rotateX(-90deg) translateZ(500px);
+}
+
+.wall-back {
+  -moz-transform: rotateX(180deg) translateZ(500px);
+  -webkit-transform: rotateX(180deg) translateZ(500px);
+  transform: rotateX(180deg) translateZ(500px);
+}
+
+@-moz-keyframes move {
+  0%{
+    -moz-transform: translateZ(-500px) rotate(0deg);
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    -moz-transform: translateZ(500px) rotate(0deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes move {
+  0%{
+    -webkit-transform: translateZ(-500px) rotate(0deg);
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    -webkit-transform: translateZ(500px) rotate(0deg);
+    opacity: 0;
+  }
+}
+@keyframes move {
+  0%{
+    transform: translateZ(-500px) rotate(0deg);
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateZ(500px) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

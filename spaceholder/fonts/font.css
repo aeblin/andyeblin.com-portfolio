@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'District Light';
+  src: url('District-Light.eot'); /* IE9 Compat Modes */
+  src: url('District-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('District-Light.woff') format('woff'), /* Modern Browsers */
+       url('District-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('District-Light.svg#vwaaxvpmwt') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'District Demi';
+  src: url('District-Demi.eot'); /* IE9 Compat Modes */
+  src: url('District-Demi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('District-Demi.woff') format('woff'), /* Modern Browsers */
+       url('District-Demi.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('District-Demi.svg#kdbefnayqv') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+

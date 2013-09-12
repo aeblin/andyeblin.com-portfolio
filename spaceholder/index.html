@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>andy eblin, front-end &amp; print designer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!-- CSS -->
+	<link rel="stylesheet" href="stylesheets/stylesheet.css" type="text/css">
+	<link rel="stylesheet" href="stylesheets/flexslider.css" type="text/css">
+	<!-- JS -->
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="/javascripts/jquery.fittext.js"></script><!--FitText! It's neat, go get it. https://github.com/davatron5000/FitText.js -->
+	<script src="/javascripts/jquery.flexslider-min.js"></script><!--FlexSlider - also neat if you need a responsive, touch-enabled slider. -->
+	<!--FlexSlider initialization -->
+	<script type="text/javascript" charset="utf-8">
+	  $(window).load(function() {
+	    $('.flexslider').flexslider();
+	  });
+	</script>
+</head>
+<body>
+	<div class="container">
+    <div id="content">
+	    <header>
+	      <h1>hi. i'm working on a new look.</h1>
+	      <p class="subhead">here's what else i've been doing lately.</p>
+	      <hr class="divDivider">
+		  </header>
+		  <div class="flexslider">
+		  	<ul class="slides">	
+	  			<li>
+	  				<img src="/images/bbf.png" alt="Buyer's Best Friend">
+	  				<div class="flexcaption">
+	  					<p>I was BBF's Lead Designer for eight-ish months. In that time I made some massive improvements 
+to the site’s CSS, implemented a few features using Python &amp; Django, designed 
+a custom MailChimp template, and branded two retail locations.</p>
+	  				</div>
+	  			</li>
+	  			<li>
+	  				<img src="/images/dignos.png" alt="Dignos Application Monitoring">
+	  				<div class="flexcaption">
+	  					<p>I designed preliminary UI mock-ups in Illustrator, and later in HTML, CSS, and JS for Dignos, an cloud-based application performance management service. <br> On top of the look and feel of the service, I also designed the logo.</p>
+	  				</div>
+	  			</li>
+	  			<li>
+	  				<img src="/images/coursetab.png" alt="Coursetab">
+	  				<div class="flexcaption">
+	  					<p>Coursetab was a project put together by a group of alumni from my Alma Mater, James Madison University, to tackle the poor state of online course management. I was brought onto the team as the Chief Design Officer and put together the UI, Icon Set, and Identity.</p>
+	  				</div>
+	  			</li>
+	  			<li>
+	  				<img src="/images/jmu.png" alt="JMU">
+	  				<div class="flexcaption">
+	  					<p>The Big Event is an annual 1,000 student day of service I co-founded and designed the identity for during my time at James Madison University. A couple years later, the Alumni Association adopted a slightly modified version of my logo design.</p>
+	  				</div>
+	  			</li>
+	  			<li>
+	  				<img src="/images/ambev.png" alt="Clear On Calories">
+	  				<div class="flexcaption">
+	  					<p>If you've bought a soda in the last couple years, you've probably seen this one. I helped design the 'Clear On Calories' tablet on nearly every soft drink sold in the US. Not the sexiest piece, but it's got reach.</p>
+	  				</div>
+	  			</li>
+	  		</ul>
+		  </div>
+		  <hr class="divDivider">
+	    <div class="footer">
+	    	<div id="resume">
+	    		<a href="/docs/AndyEblin-Resume.pdf" target="_blank">take a résumé</a>
+	    	</div>
+	    	<div id="logo">	
+	    		<img src="/images/ae.png" alt="yo.">
+	    	</div>	
+	    	<div id="email">
+	    		<a href="mailto:hi@andyeblin.com" target="_blank">drop me a line</a>
+	    	</div>
+	    </div>
+  	</div>
+		<section id="animation">
+			<div class="scene">
+			  <div class="wrap">
+			      <div class="wall wall-right"></div>
+			      <div class="wall wall-left"></div>   
+			      <div class="wall wall-top"></div>
+			      <div class="wall wall-bottom"></div>  
+			      <div class="wall wall-back"></div>    
+			  </div>
+			  <div class="wrap">
+			      <div class="wall wall-right"></div>
+			      <div class="wall wall-left"></div>   
+			      <div class="wall wall-top"></div>
+			      <div class="wall wall-bottom"></div>    
+			      <div class="wall wall-back"></div>    
+			  </div>
+			</div>
+	  </section>
+	</div>
+	<!-- More JS -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("h1").fitText(1.41);
+			$(".subhead").fitText(1.86);
+		});
+	</script>
+</body>
+</html>
